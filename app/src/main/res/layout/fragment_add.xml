@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".fragments.add_task.AddTaskFragment">
+
+
+    <EditText
+        android:id="@+id/et_add_title"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <Spinner
+        android:id="@+id/spr_task_priority"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/custom_input"
+        android:entries="@array/priorities"
+        app:layout_constraintEnd_toEndOf="@+id/et_add_title"
+        app:layout_constraintStart_toStartOf="@+id/et_add_title"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_title" />
+
+    <EditText
+        android:id="@+id/et_task_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custom_input"
+        android:ems="10"
+        android:hint="@string/description"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spr_task_priority"
+        app:layout_constraintStart_toStartOf="@+id/spr_task_priority"
+        app:layout_constraintTop_toBottomOf="@+id/spr_task_priority"
+        android:autofillHints="" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

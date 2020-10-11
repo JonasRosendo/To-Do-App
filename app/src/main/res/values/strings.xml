@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">To-Do App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="empty_box" translatable="false">empty box</string>
+    <string name="no_tasks">No Tasks</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="new_task">New Task</string>
+    <string name="update_task">Update Task</string>
+    <string name="tasks">Tasks</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort By</string>
+    <string name="priority_high">Priority High</string>
+    <string name="priority_medium">Priority Medium</string>
+    <string name="priority_low">Priority Low</string>
+    <string name="delete_all">Delete All</string>
+    <string name="save_task">Save Task</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="warning">Warning!</string>
+    <string name="delete_all_tasks_message">If you confirm all your tasks will be deleted, do you want to continue the operation?</string>
+    <string name="delete_single_task_message">Do you want to delete \'%s\'?</string>
+
+    <string-array name="priorities">
+        <item>@string/priority_high</item>
+        <item>@string/priority_medium</item>
+        <item>@string/priority_low</item>
+    </string-array>
+
+</resources>

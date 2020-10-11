@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="task"
+            type="com.jonasrosendo.to_doapp.data.model.Task" />
+
+        <variable
+            name="viewModel"
+            type="com.jonasrosendo.to_doapp.TaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.tasks.TasksFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tasks"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:spanCount="2"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_new_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:navigateToAddFragment="@{true}"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_plus"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_empty_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_box"
+            android:src="@drawable/ic_empty_list"
+            android:visibility="gone"
+            android:emptyTasks="@{viewModel.showEmptyState}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_empty_tasks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0.5"
+            android:text="@string/no_tasks"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:emptyTasks="@{viewModel.showEmptyState}"
+            app:layout_constraintEnd_toEndOf="@+id/iv_empty_tasks"
+            app:layout_constraintStart_toStartOf="@+id/iv_empty_tasks"
+            app:layout_constraintTop_toBottomOf="@+id/iv_empty_tasks"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">To-Do App</string>
+    <string name="no_tasks">Sem Tarefas</string>
+    <string name="title">Título</string>
+    <string name="description">Descrição</string>
+    <string name="new_task">Nova Tarefa</string>
+    <string name="update_task">Atualizar Tarefa</string>
+    <string name="tasks">Tarefas</string>
+    <string name="search">Buscar</string>
+    <string name="sort_by">Ordenar por</string>
+    <string name="priority_high">Prioridade Alta</string>
+    <string name="priority_low">Prioridade Baixa</string>
+    <string name="delete_all">Deletar Tudo</string>
+    <string name="save_task">Salvar Tarefa</string>
+    <string name="save">Salvar</string>
+    <string name="delete">Deletar</string>
+
+    <string-array name="priorities">
+        <item>Prioridade Alta</item>
+        <item>Prioridade Média</item>
+        <item>Prioridade Baixa</item>
+    </string-array>
+    <string name="priority_medium">Prioridade Média</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="warning">Cuidado!</string>
+    <string name="delete_all_tasks_message">Se você confirmar todas suas tarefas serão deletadas, você deseja continuar com a operação?</string>
+    <string name="delete_single_task_message">Você deseja deletar \'%s\'?</string>
+</resources>

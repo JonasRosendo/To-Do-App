@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        
+        <variable
+            name="args"
+            type="com.jonasrosendo.to_doapp.fragments.update_task.UpdateTaskFragmentArgs" />
+
+        <variable
+            name="viewModel"
+            type="com.jonasrosendo.to_doapp.TaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        tools:context=".fragments.update_task.UpdateTaskFragment">
+
+        <EditText
+            android:id="@+id/et_update_title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:text="@{args.currentItem.title}"
+            android:hint="@string/title"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/spr_task_update_priority"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/custom_input"
+            android:entries="@array/priorities"
+            android:parsePriorityToInt="@{args.currentItem.priority}"
+            app:layout_constraintEnd_toEndOf="@+id/et_update_title"
+            app:layout_constraintStart_toStartOf="@+id/et_update_title"
+            app:layout_constraintTop_toBottomOf="@+id/et_update_title" />
+
+        <EditText
+            android:id="@+id/et_task_update_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:text="@{args.currentItem.description}"
+            android:hint="@string/description"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/spr_task_update_priority"
+            app:layout_constraintStart_toStartOf="@+id/spr_task_update_priority"
+            app:layout_constraintTop_toBottomOf="@+id/spr_task_update_priority"
+            android:autofillHints="" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
